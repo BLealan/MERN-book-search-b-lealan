@@ -27,3 +27,18 @@ WHEN I click on the Remove button on a book
 THEN that book is deleted from my saved books list
 WHEN I click on the Logout button
 THEN I am logged out of the site and presented with a menu with the options Search for Books and Login/Signup and an input field to search for books and a submit button  
+
+
+* `SearchBooks.jsx`:
+
+  * Use the Apollo `useMutation()` Hook to execute the `SAVE_BOOK` mutation in the `handleSaveBook()` function instead of the `saveBook()` function imported from the `API` file.
+
+  * Make sure you keep the logic for saving the book's ID to state in the `try...catch` block!
+
+* `SavedBooks.jsx`:
+
+  * Remove the `useEffect()` Hook that sets the state for `UserData`.
+
+  * Instead, use the `useQuery()` Hook to execute the `GET_ME` query on load and save it to a variable named `userData`.
+
+  * Use the `useMutation()` Hook to execute the `REMOVE_BOOK` mutation in the `handleDeleteBook()` function instead of the `deleteBook()` function that's imported from `API` file. (Make sure you keep the `removeBookId()` function in place!)
