@@ -1,3 +1,19 @@
+# MERN Book Search Engine
+
+## Description
+
+This is a search engine where users can look up books and add them to a personal list. Using an API any search results are returned with some associated information, such as it's title, author(s), description, an image and link to Google Books. The log-in/sign-up in the header allow the user to access their own account with which to edit their book list. 
+
+## Installation
+
+If using from a local device, clone from GitLab and ensure you are use the following commands with the root folder in your terminal.
+- `npm install` will ensure all dependencies and devdependencies are ready to be used
+- `npm run develop` will simultaneously enable functionality in the server and client folders
+
+## Usage
+
+## Sources
+
 <!-- GIVEN a book search engine
 WHEN I load the search engine
 THEN I am presented with a menu with the options Search for Books and Login/Signup and an input field to search for books and a submit button
