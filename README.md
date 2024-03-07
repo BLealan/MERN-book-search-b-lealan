@@ -2,43 +2,19 @@
 
 ## Description
 
-This is a search engine where users can look up books and add them to a personal list. Using an API any search results are returned with some associated information, such as it's title, author(s), description, an image and link to Google Books. The log-in/sign-up in the header allow the user to access their own account with which to edit their book list. Existing code has been refactored to ensure it is using a GraphQL API and an Apollo Server.  
+This is a search engine where users can look up books and add them to a personal list. Using an API any search results are returned with some associated information, such as it's title, author(s), description, an image and link to Google Books. The log-in/sign-up in the header allow the user to access their own account with which to edit their book list. Existing code has been refactored to ensure it is using a GraphQL API and an Apollo Server.
 
 ## Installation
 
 If using from a local device, clone from GitLab and ensure you are use the following commands with the root folder in your terminal.
 - `npm install` will ensure all dependencies and devdependencies are ready to be used
-- `npm run develop` will simultaneously enable functionality in the server and client folders
+- `npm run develop` will simultaneously enable functionality in the server and client folders, and will be live on localhost:3000
 
-## Usage
+## Screenshots
 
+![Screenshot 1](./assets/screenshot-1.png)
+![Screenshot 2](./assets/screenshot-2.png)
 
-<!-- GIVEN a book search engine
-WHEN I load the search engine
-THEN I am presented with a menu with the options Search for Books and Login/Signup and an input field to search for books and a submit button
-WHEN I click on the Search for Books menu option
-THEN I am presented with an input field to search for books and a submit button
-WHEN I am not logged in and enter a search term in the input field and click the submit button
-THEN I am presented with several search results, each featuring a book’s title, author, description, image, and a link to that book on the Google Books site -->
-<!-- WHEN I click on the Login/Signup menu option
-THEN a modal appears on the screen with a toggle between the option to log in or sign up
-WHEN the toggle is set to Signup
-THEN I am presented with three inputs for a username, an email address, and a password, and a signup button
-WHEN the toggle is set to Login
-THEN I am presented with two inputs for an email address and a password and login button -->
-WHEN I enter a valid email address and create a password and click on the signup button
-THEN my user account is created and I am logged in to the site
-WHEN I enter my account’s email address and password and click on the login button
-THEN I the modal closes and I am logged in to the site
-WHEN I am logged in to the site
-THEN the menu options change to Search for Books, an option to see my saved books, and Logout
-WHEN I am logged in and enter a search term in the input field and click the submit button
-THEN I am presented with several search results, each featuring a book’s title, author, description, image, and a link to that book on the Google Books site and a button to save a book to my account
-WHEN I click on the Save button on a book
-THEN that book’s information is saved to my account
-WHEN I click on the option to see my saved books
-THEN I am presented with all of the books I have saved to my account, each featuring the book’s title, author, description, image, and a link to that book on the Google Books site and a button to remove a book from my account
-WHEN I click on the Remove button on a book
-THEN that book is deleted from my saved books list
-WHEN I click on the Logout button
-THEN I am logged out of the site and presented with a menu with the options Search for Books and Login/Signup and an input field to search for books and a submit button 
+## Project Status
+
+At the moment the code is able to deploy on a local browser, but the "signup" functionality does not work as intended. As such, testing for further functionality is hindered. The deployment to Heroku has also thrown some problems as it does not seem to deploy correctly.
