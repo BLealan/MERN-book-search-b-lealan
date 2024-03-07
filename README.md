@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a search engine where users can look up books and add them to a personal list. Using an API any search results are returned with some associated information, such as it's title, author(s), description, an image and link to Google Books. The log-in/sign-up in the header allow the user to access their own account with which to edit their book list. 
+This is a search engine where users can look up books and add them to a personal list. Using an API any search results are returned with some associated information, such as it's title, author(s), description, an image and link to Google Books. The log-in/sign-up in the header allow the user to access their own account with which to edit their book list. Existing code has been refactored to ensure it is using a GraphQL API and an Apollo Server.  
 
 ## Installation
 
@@ -12,7 +12,6 @@ If using from a local device, clone from GitLab and ensure you are use the follo
 
 ## Usage
 
-## Sources
 
 <!-- GIVEN a book search engine
 WHEN I load the search engine
@@ -42,19 +41,4 @@ THEN I am presented with all of the books I have saved to my account, each featu
 WHEN I click on the Remove button on a book
 THEN that book is deleted from my saved books list
 WHEN I click on the Logout button
-THEN I am logged out of the site and presented with a menu with the options Search for Books and Login/Signup and an input field to search for books and a submit button  
-
-
-* `SearchBooks.jsx`:
-
-  * Use the Apollo `useMutation()` Hook to execute the `SAVE_BOOK` mutation in the `handleSaveBook()` function instead of the `saveBook()` function imported from the `API` file.
-
-  * Make sure you keep the logic for saving the book's ID to state in the `try...catch` block!
-
-* `SavedBooks.jsx`:
-
-  * Remove the `useEffect()` Hook that sets the state for `UserData`.
-
-  * Instead, use the `useQuery()` Hook to execute the `GET_ME` query on load and save it to a variable named `userData`.
-
-  * Use the `useMutation()` Hook to execute the `REMOVE_BOOK` mutation in the `handleDeleteBook()` function instead of the `deleteBook()` function that's imported from `API` file. (Make sure you keep the `removeBookId()` function in place!)
+THEN I am logged out of the site and presented with a menu with the options Search for Books and Login/Signup and an input field to search for books and a submit button 
