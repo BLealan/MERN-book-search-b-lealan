@@ -1,4 +1,4 @@
-import { GET_ME } from '../utils/queries';
+import { GET_ME } from '../../utils/queries';
 import { REMOVE_BOOK } from '../utils/mutations'
 import { useMutation } from '@apollo/client';
 

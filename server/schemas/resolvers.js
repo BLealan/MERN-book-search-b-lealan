@@ -3,13 +3,13 @@ const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
     Query: {
-        users: async () => {
-            return User.find();
-        },
+        // users: async () => {
+        //     return User.find();
+        // },
 
-        user: async (parent, { userId }) => {
-            return User.findOne({ _id: userId });
-        },
+        // user: async (parent, { userId }) => {
+        //     return User.findOne({ _id: userId });
+        // },
 
         me: async (parent, args, context) => {
             if (context.user) {
@@ -43,7 +43,7 @@ const resolvers = {
             return { token, profile };
         },
 
-        addBook: async (parent, { userId, book }, context) => {
+        saveBook: async (parent, { userId, book }, context) => {
             if (context.user) {
                 return User.findOneAndUpdate(
                     { _id: userId },
